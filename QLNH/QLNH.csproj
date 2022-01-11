@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C294DA5F-04D7-45C3-AC64-26C57439B9AC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLNH</RootNamespace>
+    <AssemblyName>QLNH</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL_QLNH\Ban_CaLam_DAL.cs" />
+    <Compile Include="DAL_QLNH\Ban_DAL.cs" />
+    <Compile Include="DAL_QLNH\ChamCong_DAL.cs" />
+    <Compile Include="DAL_QLNH\DatBan_DAL.cs" />
+    <Compile Include="DAL_QLNH\DatMon_DAL.cs" />
+    <Compile Include="DAL_QLNH\HoaDon_DAL.cs" />
+    <Compile Include="DAL_QLNH\LogIn_DAL.cs" />
+    <Compile Include="DAL_QLNH\MonAnCaLam_DAL.cs" />
+    <Compile Include="DAL_QLNH\MonAn_DAL.cs" />
+    <Compile Include="DAL_QLNH\MY_DB.cs" />
+    <Compile Include="DAL_QLNH\NhanVien_DAL.cs" />
+    <Compile Include="DTO_QLNH\Ban.cs" />
+    <Compile Include="DTO_QLNH\BanCaLam.cs" />
+    <Compile Include="DTO_QLNH\CaLam.cs" />
+    <Compile Include="DTO_QLNH\ChamCong.cs" />
+    <Compile Include="DTO_QLNH\DatMon.cs" />
+    <Compile Include="DTO_QLNH\HoaDon.cs" />
+    <Compile Include="DTO_QLNH\MonAn.cs" />
+    <Compile Include="DTO_QLNH\MonAnCaLam.cs" />
+    <Compile Include="DTO_QLNH\Mon_CaLam.cs" />
+    <Compile Include="DTO_QLNH\NhanVien.cs" />
+    <Compile Include="DTO_QLNH\User.cs" />
+    <Compile Include="GUI_QLNH\frm_AddBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\frm_AddBan.Designer.cs">
+      <DependentUpon>frm_AddBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\frm_AddMonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\frm_AddMonAn.Designer.cs">
+      <DependentUpon>frm_AddMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\frm_BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\frm_BanHang.Designer.cs">
+      <DependentUpon>frm_BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\frm_ListHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\frm_ListHoaDon.Designer.cs">
+      <DependentUpon>frm_ListHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\frm_ShowHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\frm_ShowHoaDon.Designer.cs">
+      <DependentUpon>frm_ShowHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_NV\frm_LichLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_NV\frm_LichLamViec.Designer.cs">
+      <DependentUpon>frm_LichLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_NV\frm_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_NV\frm_NhanVien.Designer.cs">
+      <DependentUpon>frm_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_AddAndEditMonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_AddAndEditMonAn.Designer.cs">
+      <DependentUpon>frm_AddAndEditMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_AddEditMonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_AddEditMonAn.Designer.cs">
+      <DependentUpon>frm_AddEditMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_AddNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_AddNhanVien.Designer.cs">
+      <DependentUpon>frm_AddNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_DoiPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_DoiPass.Designer.cs">
+      <DependentUpon>frm_DoiPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_HoaDon.Designer.cs">
+      <DependentUpon>frm_HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_Luong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_Luong.Designer.cs">
+      <DependentUpon>frm_Luong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_MonAnCaLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_MonAnCaLam.Designer.cs">
+      <DependentUpon>frm_MonAnCaLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_QLBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_QLBan.Designer.cs">
+      <DependentUpon>frm_QLBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_QLBanCaLamcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_QLBanCaLamcs.Designer.cs">
+      <DependentUpon>frm_QLBanCaLamcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_QLThongTinNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_QLThongTinNV.designer.cs">
+      <DependentUpon>frm_QLThongTinNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_CaLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_CaLam.designer.cs">
+      <DependentUpon>frm_CaLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_QLMonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_QLMonAn.designer.cs">
+      <DependentUpon>frm_QLMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_QuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_QuanLy.designer.cs">
+      <DependentUpon>frm_QuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_ThongKe.Designer.cs">
+      <DependentUpon>frm_ThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_ThongTinNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_ThongTinNV.Designer.cs">
+      <DependentUpon>frm_ThongTinNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_TTCaLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\GUI_QL\frm_TTCaLamViec.Designer.cs">
+      <DependentUpon>frm_TTCaLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\List_HoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\List_HoaDon.Designer.cs">
+      <DependentUpon>List_HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\List_Mon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNH\List_Mon.Designer.cs">
+      <DependentUpon>List_Mon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNH\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI_QLNH\frm_AddBan.resx">
+      <DependentUpon>frm_AddBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\frm_AddMonAn.resx">
+      <DependentUpon>frm_AddMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\frm_BanHang.resx">
+      <DependentUpon>frm_BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\frm_ListHoaDon.resx">
+      <DependentUpon>frm_ListHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\frm_ShowHoaDon.resx">
+      <DependentUpon>frm_ShowHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_NV\frm_LichLamViec.resx">
+      <DependentUpon>frm_LichLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_NV\frm_NhanVien.resx">
+      <DependentUpon>frm_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_AddAndEditMonAn.resx">
+      <DependentUpon>frm_AddAndEditMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_AddEditMonAn.resx">
+      <DependentUpon>frm_AddEditMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_AddNhanVien.resx">
+      <DependentUpon>frm_AddNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_DoiPass.resx">
+      <DependentUpon>frm_DoiPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_HoaDon.resx">
+      <DependentUpon>frm_HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_Luong.resx">
+      <DependentUpon>frm_Luong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_MonAnCaLam.resx">
+      <DependentUpon>frm_MonAnCaLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_QLBan.resx">
+      <DependentUpon>frm_QLBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_QLBanCaLamcs.resx">
+      <DependentUpon>frm_QLBanCaLamcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_QLThongTinNV.resx">
+      <DependentUpon>frm_QLThongTinNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_CaLam.resx">
+      <DependentUpon>frm_CaLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_QLMonAn.resx">
+      <DependentUpon>frm_QLMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_QuanLy.resx">
+      <DependentUpon>frm_QuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_ThongKe.resx">
+      <DependentUpon>frm_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_ThongTinNV.resx">
+      <DependentUpon>frm_ThongTinNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\GUI_QL\frm_TTCaLamViec.resx">
+      <DependentUpon>frm_TTCaLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\List_HoaDon.resx">
+      <DependentUpon>List_HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNH\List_Mon.resx">
+      <DependentUpon>List_Mon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
